@@ -20,7 +20,7 @@ h1{max-width:850px;margin:0 auto;font-size:clamp(2.1rem,4.3vw,4.2rem)}
 h1 .title-mask,h1 .title-secondary{color:var(--ink)}
 .hero-orbit{position:absolute;inset:0;pointer-events:none;z-index:0;mask-image:radial-gradient(ellipse 34% 42% at 50% 50%,transparent 38%,#000 100%)}
 .orbit-card{position:absolute;top:0;left:0;width:calc(clamp(46px,4.1vw,76px)*var(--tile-size));height:calc(clamp(46px,4.1vw,76px)*var(--tile-size));offset-path:ellipse(var(--orbit-rx) var(--orbit-ry) at 50% 50%);offset-rotate:0deg;offset-anchor:50% 50%;offset-distance:0%;animation:orbit-travel var(--orbit-duration) linear infinite,orbit-depth var(--orbit-duration) linear infinite;animation-delay:var(--orbit-delay),var(--depth-delay);will-change:transform;contain:layout style}
-.orbit-image{width:100%;height:100%;background-image:url('./assets/hero-atlas.png');background-size:400% 400%;background-position:var(--x) var(--y);border-radius:12px;box-shadow:0 5px 14px #0000000d;transform:rotate(var(--tilt));animation:tile-spin var(--orbit-duration) linear infinite;animation-delay:var(--orbit-delay)}
+.orbit-image{width:100%;height:100%;background-image:url('./assets/hero-pinterest.webp');background-size:800% 700%;background-position:var(--x) var(--y);border-radius:12px;box-shadow:0 5px 14px #0000000d;transform:rotate(var(--tilt));animation:tile-spin var(--orbit-duration) linear infinite;animation-delay:var(--orbit-delay)}
 .orbit-pause{position:absolute;right:3.5%;bottom:13px;font-size:14px;color:var(--muted);border:1px solid var(--line);padding:5px 10px;border-radius:24px;background:var(--bg);z-index:3}
 html[data-orbit-paused="true"] :is(.orbit-card,.orbit-image){animation-play-state:paused}
 html[data-theme="dark"] .hero-orbit{opacity:.82}
@@ -90,7 +90,7 @@ button:disabled{cursor:wait;opacity:.65}
 .card-body h3,.dialog-title{overflow-wrap:anywhere}.card-meta span{min-width:0;overflow-wrap:anywhere}.mobile-nav{top:var(--header-height,85px)}html{scroll-padding-top:calc(var(--header-height,85px) + 20px)}
 
 .card-cover{aspect-ratio:4/3;min-height:0!important;padding:19px!important;color:#fff;background:#303030;isolation:isolate}
-.cover-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;transition:transform .65s cubic-bezier(.2,.7,.2,1)}
+.cover-image{position:absolute;inset:0;width:100%;height:100%;background-repeat:no-repeat;z-index:0;transition:transform .65s cubic-bezier(.2,.7,.2,1)}
 .card-cover::after{content:"";position:absolute;inset:0;z-index:1;opacity:1;background:linear-gradient(180deg,#0006 0%,transparent 40%,transparent 55%,#000a 100%)}
 .card-cover:hover .cover-image{transform:scale(1.045)}
 .cover-tag{background:#ffffffec;color:#171717;border:0;border-radius:20px;opacity:1;padding:4px 9px;font-size:12px}
@@ -111,3 +111,5 @@ input::placeholder,textarea::placeholder{color:var(--muted);opacity:1}
 @media(max-width:520px){.auth-login,.auth-register{font-size:12px;padding:7px 9px}.head-actions{gap:6px}.saved-link{padding:7px 9px}.card-cover{padding:18px!important}.auth-dialog .dialog-title{font-size:25px}}
 
 #accountBtn{max-width:160px;overflow:hidden;text-overflow:ellipsis}
+
+.image-credit{display:inline-block;text-decoration:underline;margin:0 0 20px;color:var(--ink);font-size:14px;text-underline-offset:3px;min-height:44px;align-content:center}
