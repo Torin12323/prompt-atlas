@@ -113,3 +113,5 @@ input::placeholder,textarea::placeholder{color:var(--muted);opacity:1}
 #accountBtn{max-width:160px;overflow:hidden;text-overflow:ellipsis}
 
 .image-credit{display:inline-block;text-decoration:underline;margin:0 0 20px;color:var(--ink);font-size:14px;text-underline-offset:3px;min-height:44px;align-content:center}
+
+.prompt-sources{font-size:14px;color:var(--ink);border-top:1px solid var(--line);padding-top:16px;margin-bottom:12px}.prompt-sources p{margin:0 0 8px;color:var(--muted)}.prompt-sources ul{display:flex;flex-wrap:wrap;gap:6px 20px;list-style:none;padding:0;margin:4px 0}.prompt-sources a{display:inline-block;min-height:44px;align-content:center;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}

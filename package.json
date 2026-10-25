@@ -1,1 +1,16 @@
-{"name":"prompt-atlas","private":true,"type":"module","scripts":{"build":"node scripts/build.mjs","db:generate":"drizzle-kit generate"},"devDependencies":{"drizzle-kit":"0.31.10","drizzle-orm":"0.45.2"}}
+{
+  "name": "prompt-atlas",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "db:generate": "drizzle-kit generate",
+    "dev": "node scripts/dev.mjs",
+    "check:library": "node scripts/check-library.mjs"
+  },
+  "devDependencies": {
+    "drizzle-kit": "0.31.10",
+    "drizzle-orm": "0.45.2"
+  },
+  "version": "1.1.0"
+}
