@@ -5,15 +5,14 @@ html[data-theme="dark"]{--bg:#1c1c1e;--ink:#f5f5f7;--line:#48484a;--panel:#2c2c2
 body{font-family:var(--font);font-size:16px;line-height:1.6;-webkit-text-size-adjust:100%;font-kerning:normal}
 button,input,select,textarea{font-family:var(--font)}
 .header{background:var(--glass);backdrop-filter:blur(24px) saturate(150%);-webkit-backdrop-filter:blur(24px) saturate(150%);border-bottom:1px solid color-mix(in srgb,var(--line) 55%,transparent)}
-.utility-btn,.add-prompt-btn,.auth-login,.auth-register,.saved-link,.menu-btn{min-height:44px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;font-size:14px;font-weight:500;line-height:1.2;letter-spacing:0;transition:background-color .2s,box-shadow .2s,transform .2s}
+.utility-btn,.add-prompt-btn,.auth-login,.auth-register,.saved-link{min-height:44px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;font-size:14px;font-weight:500;line-height:1.2;letter-spacing:0;transition:background-color .2s,box-shadow .2s,transform .2s}
 .utility-btn{height:44px;min-width:44px;border-color:var(--line);background:var(--glass);box-shadow:var(--control-shadow)}
 #themeBtn{font-size:23px}
 .language-btn{min-width:86px;padding:0 12px;gap:6px}
-.add-prompt-btn,.auth-login,.menu-btn{padding:0 14px;background:var(--glass);border:1px solid var(--line);box-shadow:var(--control-shadow)}
+.add-prompt-btn,.auth-login{padding:0 14px;background:var(--glass);border:1px solid var(--line);box-shadow:var(--control-shadow)}
 .auth-register,.saved-link{padding:0 16px;box-shadow:0 1px 3px #0000000a}
-.utility-btn:hover,.add-prompt-btn:hover,.auth-login:hover,.menu-btn:hover{background:var(--glass-hover);transform:none}
-.utility-btn:active,.add-prompt-btn:active,.auth-register:active,.saved-link:active,.menu-btn:active{transform:scale(.97)}
-.menu-btn{display:none}
+.utility-btn:hover,.add-prompt-btn:hover,.auth-login:hover{background:var(--glass-hover);transform:none}
+.utility-btn:active,.add-prompt-btn:active,.auth-register:active,.saved-link:active{transform:scale(.97)}
 .desktop-nav a{min-height:44px;display:inline-flex;align-items:center;font-weight:500;letter-spacing:0}
 .search-box{min-height:56px;background:var(--panel);border-radius:28px;box-shadow:0 2px 10px #00000005;border:1px solid var(--line);gap:12px}
 .search-box input{font-size:16px;line-height:1.5;min-height:26px}
@@ -57,17 +56,15 @@ dialog::backdrop{background:#00000066;backdrop-filter:blur(8px)}
 .english-fields summary{min-height:44px;display:list-item;padding:10px 0;font-size:14px;list-style:revert}
 .form-error,.custom-status{font-size:14px;border-radius:12px;line-height:1.6}
 .active-filters button,.custom-status button{min-height:44px;padding:8px 12px;font-size:14px;border-radius:999px}
-.mobile-nav{background:var(--glass);backdrop-filter:blur(24px) saturate(150%);-webkit-backdrop-filter:blur(24px) saturate(150%);border-radius:0 0 22px 22px}
-.mobile-nav a{border-radius:12px;min-height:44px;padding:12px 14px;font-size:15px;font-weight:500}
 .toast{font-size:15px;border-radius:999px;padding:13px 20px;line-height:1.5}
 .footer-bottom{font-size:14px;line-height:1.5}
-@media(max-width:980px){.menu-btn{display:inline-flex}.head-actions{gap:7px}}
-@media(max-width:520px){.header{padding-top:14px;padding-bottom:14px;gap:12px}.head-actions{gap:7px}.auth-register,.saved-link,.add-prompt-btn,.auth-login,.menu-btn{padding-left:12px;padding-right:12px}.brand{font-size:17px}.dialog-shell{padding:20px}.card-body h3{font-size:20px}.filter-row select{padding-left:8px}.card-actions{gap:8px}.copy-btn{padding:0 14px}.footer-bottom{font-size:13px}}
-@media(prefers-reduced-transparency:reduce){.header,.utility-btn,.add-prompt-btn,.auth-login,.menu-btn,.mobile-nav{background:var(--panel);backdrop-filter:none;-webkit-backdrop-filter:none}}
+@media(prefers-reduced-transparency:reduce){.header,.utility-btn,.add-prompt-btn,.auth-login{background:var(--panel);backdrop-filter:none;-webkit-backdrop-filter:none}}
 @media(prefers-reduced-motion:reduce){body{transition:none}:where(button,a,input,select,textarea){transition:none!important}}
 
 .brand-wordmark{font-family:"Baleday",cursive;font-weight:400;font-style:normal;font-synthesis:none;letter-spacing:0;line-height:1.1}
 .brand .brand-wordmark{display:block;font-size:31px;padding-top:3px;white-space:nowrap}
 .brand{gap:10px}
 .footer-brand .brand-wordmark{display:block;font-size:clamp(2.8rem,4.4vw,4.5rem);line-height:1.02;letter-spacing:0}
-@media(max-width:520px){.brand .brand-wordmark{font-size:29px}.footer-brand .brand-wordmark{font-size:43px}}
+
+/* Desktop layout is the only supported layout. */
+body{min-width:1200px}.desktop-nav{display:flex}.prompt-grid{grid-template-columns:repeat(3,minmax(0,1fr))}@media(min-width:1600px){.prompt-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}

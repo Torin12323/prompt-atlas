@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.1 — 2026-10-25
+
+- Keep only the desktop layout with a 1200px minimum canvas and desktop viewport metadata.
+- Remove mobile navigation, its controls and event handlers, and phone/tablet layout breakpoints. Preserve desktop sizing and reduced-motion preferences.
+- Make the header/footer wordmarks return to the page top.
+- Preserve the active filters and loaded-card count when closing prompt details or using browser back/forward. Repair malformed prompt links safely.
+- Audit all seven collection routes, 542 prompt deep links, external-link attributes, favorites, and login/register return destinations; repeat bilingual and contrast checks.
+
 ## 1.1.0 — 2026-10-25
 
 - Add 96 original bilingual prompt templates across all 14 categories, bringing the public library to 542.

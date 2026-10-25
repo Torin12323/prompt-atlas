@@ -42,9 +42,6 @@ h1 .title-secondary{color:#777}
 .fav-btn.active{background:#171717;border-color:#171717;color:#fff}
 .dialog-actions .active{background:#dedede;color:#171717}
 .load-more:hover{background:#171717;color:#fff}
-.mobile-nav:not([hidden]){animation:menu-enter .45s var(--ease-out) both}
-.mobile-nav a{transition:background .25s,transform .4s var(--ease-out)}
-.mobile-nav a:hover{background:#dadada;transform:translateX(3px)}
 dialog[open]{animation:dialog-enter .45s var(--ease-out) both}
 dialog[open]::backdrop{animation:backdrop-enter .4s ease both}
 .dialog-bar button{transition:transform .5s var(--ease-out)}
@@ -57,6 +54,5 @@ dialog[open]::backdrop{animation:backdrop-enter .4s ease both}
 @keyframes card-reveal{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
 @keyframes dialog-enter{from{opacity:0;transform:translateY(28px) scale(.975)}to{opacity:1;transform:translateY(0) scale(1)}}
 @keyframes backdrop-enter{from{opacity:0}to{opacity:1}}
-@keyframes menu-enter{from{opacity:0;transform:translateY(-12px);clip-path:inset(0 0 100% 0)}to{opacity:1;transform:translateY(0);clip-path:inset(0)}}
 @media(hover:none){.prompt-card:hover{transform:none}.card-cover:hover .cover-name,.card-cover:hover .cover-cross,.card-cover:hover .cover-bottom{transform:none}.cover-name,.cover-cross{will-change:auto}}
 @media(prefers-reduced-motion:reduce){.prompt-card.await-reveal{opacity:1;transform:none}.title-text,.prompt-card,.intro-aside,.search-row{animation:none!important;transform:none!important;opacity:1!important}*,*::before,*::after{transition:none!important;animation:none!important}.cover-name,.cover-cross{will-change:auto}}
